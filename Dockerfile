@@ -3,8 +3,7 @@ FROM alpine:3.8
 ENV SCEPTRE_VERSION=1.4.0
 
 RUN apk -v --no-cache add \
-        python \
-        py-pip \
+        python3 \
         ca-certificates \
         groff \
         less \
@@ -15,9 +14,8 @@ RUN apk -v --no-cache add \
         zip \
         git \
         && \
-    pip install --no-cache-dir --upgrade sceptre==$SCEPTRE_VERSION && \
-    update-ca-certificates && \
-    apk -v --purge del py-pip
+    pip3 install --no-cache-dir --upgrade sceptre==$SCEPTRE_VERSION && \
+    update-ca-certificates
 
 VOLUME [ "/root/.aws" ]
 VOLUME [ "/opt/app" ]
