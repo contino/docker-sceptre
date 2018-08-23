@@ -1,6 +1,6 @@
 FROM alpine:3.8
 
-ENV SCEPTRE_VERSION=1.4.0
+ENV SCEPTRE_VERSION=1.4.1
 
 RUN apk -v --no-cache add \
         python3 \
