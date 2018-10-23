@@ -14,7 +14,7 @@ RUN apk -v --no-cache add \
         zip \
         git \
         && \
-    pip3 install --no-cache-dir --upgrade sceptre==$SCEPTRE_VERSION && \
+    pip3 install --no-cache-dir --upgrade sceptre==$SCEPTRE_VERSION troposphere>=2.0.0 && \
     update-ca-certificates
 
 VOLUME [ "/root/.aws" ]
