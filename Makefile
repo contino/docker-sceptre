@@ -3,7 +3,7 @@ IMAGE_NAME ?= contino/sceptre:$(SCEPTRE_VERSION)
 TAG = $(SCEPTRE_VERSION)
 
 build:
-	docker build -t $(IMAGE_NAME) .
+	docker build --build-arg SCEPTRE_VERSION=$(SCEPTRE_VERSION) -t $(IMAGE_NAME) .
 
 test:
 	docker run --rm -it $(IMAGE_NAME) sceptre --version
