@@ -24,10 +24,10 @@ Using docker-compose:
 And run `docker-compose run sceptre --version`
 
 ## Build
-Update the `SCEPTRE_VERSION` in the `Makefile`. Then run:
+Update the `SCEPTRE_VERSION` in both `Makefile` and `Dockerfile`. Then run:
 
     make build
-
+    
 Docker Hub will automatically trigger a new build.
 
 ## Related Projects
